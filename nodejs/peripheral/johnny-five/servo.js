@@ -34,7 +34,7 @@ class AngleCharacteristic extends bleno.Characteristic {
   
   onWriteRequest(data, offset, withoutResponse, callback) {
     console.log('write request: ' + data.toString('hex'));
-    servo.angle(data[0]);
+    servo.to(data[0]);
     callback(this.RESULT_SUCCESS);
   }  
 }
